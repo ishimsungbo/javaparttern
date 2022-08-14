@@ -10,6 +10,10 @@ public class RemoteControlTest {
         remote.setSlot(loomLight);
         remote.buttonWasPressed();
 
+        GarageDoor garageDoor = new GarageDoor();
+        GarageDoorOpenCommand garageDoorOpenCommand = new GarageDoorOpenCommand(garageDoor);
+        remote.setSlot(garageDoorOpenCommand);
+        remote.buttonWasPressed();
     }
 
 }
